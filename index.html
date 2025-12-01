@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>GROUP 8/ BLOXDAILY WEBSITE/</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloxDaily - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<style>
+ /*This allows my div to fill the entire space without being limited by default margins or padding*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #e695ff, #f8d5ff, #0051ff, #79ebff, #bccbec);
+            font-family: 'Fredoka', sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .about-us-section {
+            background: linear-gradient(135deg, #504cd7, #a77efe);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-us-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+        }
+
+        .about-us-title {
+            font-size: 70px;
+            color: aliceblue;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #ffffff;
+            font-family: 'Fredoka', sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-us-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            font-family: 'PT Serif', serif;
+            line-height: 1.7;
+            font-size: 18px;
+            margin: 0 auto;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-us-content p {
+            margin-bottom: 15px;
+        }
+
+        .team-photo-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .team-photo {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+            width: 200px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .team-member-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: rgb(252, 236, 193);
+        }
+
+        .team-member-role {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-email {
+            font-size: 22px;
+            color: rgb(252, 236, 193);
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .social-links {
+            margin-top: 20px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: linear-gradient(to right, rgb(97, 90, 254), rgb(194, 111, 226));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-us-title {
+                font-size: 50px;
+            }
+            
+            .about-us-content {
+                font-size: 16px;
+            }
+            
+            .team-member {
+                width: 150px;
+            }
+        }
+        
+        
+
+html {
+    scroll-behavior: smooth;
+}
+/* This is the CSS Intro */
+.center-container {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        background: linear-gradient(to bottom, rgb(61, 58, 219), rgb(70, 71, 219));
+        text-align: center;
+ }
+ 
+/** NAVIGATION BAR **/
+ .bottom-nav {
+     background: linear-gradient(to right, rgb(97, 90, 254),rgb(194, 111, 226));
+     display: flex;
+     justify-content: center;
+     align-items: center;       
+     gap: 20px;
+     padding: 20px 0;
+     font-size: 20px;
+     font-family: 'Fredoka';
+     font-weight: 700;
+
+ }
+ 
+ .bottom-nav a {
+  color: aliceblue;
+  text-decoration: none;
+  margin: 0 20px;
+  text-shadow: 0px 5px 4px rgb(0, 7, 173);
+}
+
+.bottom-nav a { position: relative; padding: 0 2rem; color: aliceblue; text-decoration: none; }
+
+.bottom-nav a::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); height: 30px; width: 2px; background: linear-gradient(to bottom,  aliceblue, grey); }
+
+.bottom-nav a::after { right: 0; left: 0; }
+
+ .bottom-nav a:hover {
+  
+    color: rgb(252, 236, 193); 
+    text-shadow: 0px 5px 4px rgb(244, 183, 236);
+}
+
+.bottom-nav {
+    position: sticky;  /* ← THIS makes it follow down the page */
+    top: 0;
+    z-index: 1000;
+}
+
+/** Sections **/
+.id {
+    margin:30px;
+     gap: 20px;
+     padding: 20px 0;
+}
+
+/**SEARCH BAR**/
+.search{
+    position: relative;  
+     margin: 20px auto;
+     margin-top:60px;
+    padding: 8px 24px;
+    width: 600px; height: 55px;
+    gap: 20px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    background: linear-gradient(to right,  rgb(252, 236, 193),rgb(244, 183, 236));
+    transition: box-shadow 0.25s;  
+}
+
+ .search:focus-within {
+
+   box-shadow: 0px 0px 20px rgb(255, 255, 255);
+ }
+.search-input {
+    font-size: 20px;
+    font-family: "PT Serif", serif;
+    color: #6f52bd;
+    outline: none;
+    border: none;
+    background:transparent;
+    width: 300px;
+    flex: 1;
+
+}
+
+.search-input::placeholder{ 
+    font-size:18px;
+    color: rgb(211, 145, 202);
+}
+.search-icon {
+    color: rgb(0, 7, 173);
+    font-size:24px;
+     margin-left: 20px; 
+
+}
+/**Home**/
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px 20px;
+}
+
+.about-title {
+    font-size: 70px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #ffffff;
+}
+
+.about-subtitle {
+    font-size: 1.3rem;
+    color: rgb(86, 84, 153);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mission-card {
+    background: linear-gradient(to right,  rgb(252, 236, 193),rgb(244, 183, 236));
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mission-card h3 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color:#791f1f;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature-card h4 {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+ 
+    text-shadow: 0px 2px 0px rgb(255, 255, 255);
+    
+}
+
+.feature-card p {
+    color: aliceblue;
+    line-height: 1.6;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #504cd7, #a77efe);
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.join-us {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(252, 236, 193);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/**NEWS CSS*/
+.news {
+    display: flex;
+    margin-top: 0px;
+    gap: 80px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px; 
+    margin-bottom: 300px;
+    align-items: center;
+    padding-top: 40px
+}
+
+.group{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+/**Boxes**/
+
+
+/**Boxes in Features**/
+
+.features{
+    display: flex;          
+    flex-direction: column; 
+    gap: 20px;             
+    align-items: center;    
+    font-size: 20px;
+    text-align: center;
+     justify-content: center; 
+    line-height: 2.0;   
+     gap: 20px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    color: #ffffff;
+    text-shadow: -5px 5px 10px rgb(23, 3, 42);
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-column {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.group3 {
+    margin: 4px;
+    height:200px;
+    width: 275px;
+    background: linear-gradient(to bottom, #504cd7, #a77efe);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.group3:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.group3 img {
+  height:200px;
+  width: 275px;
+  margin: 20px;
+  object-fit: cover;
+  border-radius: 20px
+}
+
+
+
+.scroll-box {
+  align-items: center;
+     position: relative; 
+    height: 6600px; 
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-right: 10px; 
+    display: flex;
+     flex-direction: column; 
+    align-items: center;    
+    gap: 5px;             
+    max-height: 1324px;     
+    overflow-y: auto;       
+    padding-right: 10px; 
+    margin:10px;
+}
+
+/* The handle */
+.scroll-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #5547eb, #c7a3ff);
+    border-radius: 10px;
+}
+
+/* Hover effect to make it shiny when hovered */
+.scroll-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #791f1f, #ffc560);
+     transition: transform 5s ease, box-shadow 0.3s ease;
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 40px;
+}
+
+/*AVATAR FASHION BOXES*/
+.group4{
+   display: flex;
+    gap: 80px;
+    justify-content: center;
+    height:400px;
+    background: linear-gradient(to bottom, #504cd7, #a77efe);
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+     cursor: pointer;
+    line-height: 6.5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap : 10px;
+    margin: 20px;
+    margin-top: 50px;
+    width: 275px;
+    border-radius: 40px;
+
+
+
+}
+
+.group4:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:(0 10px 20px rgba (0, 0, 0, 0.2));
+}
+
+    .group4 img {
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+        object-fit: cover;
+        cursor: pointer;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        border: 3px solid rgba(255, 255, 255, 0.1);
+    }
+        .group4 img:hover {
+        border-radius: 20px;
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 15px 30px rgba(107, 75, 247, 0.4);
+        border-color: rgba(107, 75, 247, 0.5);
+    }
+
+    
+
+.HiMaam {
+    
+  
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.ByeMaam{
+    display: flex;
+    gap: 20px;
+   
+}
+
+
+.card{
+    margin: 4px;
+    height:200px;
+    width: 275px;
+    background: linear-gradient(to bottom, #504cd7, #a77efe);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+    width: 275px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px
+}
+
+
+
+/*Avatar Fashion CSS*/
+
+.avatar-fashion{
+
+font-size: 20px;
+     text-align: left;   
+    line-height: 2.0; 
+    letter-spacing: 5px;  
+     gap: 20px;
+    margin-left: 40px;
+}
+
+
+
+/* Popup System */
+.popup-container {
+        position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+}
+
+.popup-toggle {
+display: none;
+}
+
+.popup-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 999;
+display: none;
+animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0.8);
+width: 80%;
+height: 80%;
+background: linear-gradient(to bottom, #504cd7, #a77efe);
+border-radius: 20px;
+z-index: 1000;
+display: none;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+font-family: 'Fredoka', sans-serif;
+font-size: 24px;
+padding: 20px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+animation: popupIn 0.4s ease forwards;
+overflow: hidden;
+}
+
+     .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px; /* Changed from 30px to 40px */
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.2s ease;
+    width: 50px; /* Add width */
+    height: 50px; /* Add height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .popup-close:hover {
+            transform: scale(1.2);
+        }
+
+        .popup-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0px 5px 4px rgb(0, 0, 0);
+        }
+
+        .popup-text {
+            font-size: 25px;
+            text-align: center;
+            max-width: 80%;
+            line-height: 1.6;
+            font-family: 'Fredoka';
+            text-shadow: 0px 5px 4px rgb(0, 0, 0);
+
+        }
+
+/* Show popup when checkbox is checked */
+#popup-toggle-1:checked ~ .popup-overlay,
+#popup-toggle-1:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-2:checked ~ .popup-overlay,
+#popup-toggle-2:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-3:checked ~ .popup-overlay,
+#popup-toggle-3:checked ~ .popup-content {
+display: flex;
+}
+
+/* Add more popup toggles as needed */
+#popup-toggle-4:checked ~ .popup-overlay,
+#popup-toggle-4:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-5:checked ~ .popup-overlay,
+#popup-toggle-5:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-6:checked ~ .popup-overlay,
+#popup-toggle-6:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-7:checked ~ .popup-overlay,
+#popup-toggle-7:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-8:checked ~ .popup-overlay,
+#popup-toggle-8:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-9:checked ~ .popup-overlay,
+#popup-toggle-9:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-10:checked ~ .popup-overlay,
+#popup-toggle-10:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-11:checked ~ .popup-overlay,
+#popup-toggle-11:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-12:checked ~ .popup-overlay,
+#popup-toggle-12:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-13:checked ~ .popup-overlay,
+#popup-toggle-13:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-14:checked ~ .popup-overlay,
+#popup-toggle-14:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-15:checked ~ .popup-overlay,
+#popup-toggle-15:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-16:checked ~ .popup-overlay,
+#popup-toggle-16:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-17:checked ~ .popup-overlay,
+#popup-toggle-17:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-18:checked ~ .popup-overlay,
+#popup-toggle-18:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-19:checked ~ .popup-overlay,
+#popup-toggle-19:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-20:checked ~ .popup-overlay,
+#popup-toggle-20:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-21:checked ~ .popup-overlay,
+#popup-toggle-21:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-22:checked ~ .popup-overlay,
+#popup-toggle-22:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-23:checked ~ .popup-overlay,
+#popup-toggle-23:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-24:checked ~ .popup-overlay,
+#popup-toggle-24:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-25:checked ~ .popup-overlay,
+#popup-toggle-25:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-26:checked ~ .popup-overlay,
+#popup-toggle-26:checked ~ .popup-content {
+display: flex;
+}
+#popup-toggle-27:checked ~ .popup-overlay,
+#popup-toggle-27:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-28:checked ~ .popup-overlay,
+#popup-toggle-28:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-29:checked ~ .popup-overlay,
+#popup-toggle-29:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-30:checked ~ .popup-overlay,
+#popup-toggle-30:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-31:checked ~ .popup-overlay,
+#popup-toggle-31:checked ~ .popup-content {
+display: flex;
+}
+
+
+#popup-toggle-32:checked ~ .popup-overlay,
+#popup-toggle-32:checked ~ .popup-content {
+display: flex;
+}
+
+
+
+#popup-toggle-33:checked ~ .popup-overlay,
+#popup-toggle-33:checked ~ .popup-content {
+display: flex;
+}
+
+#popup-toggle-34:checked ~ .popup-overlay,
+#popup-toggle-34:checked ~ .popup-content {
+display: flex;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes popupIn {
+from { 
+transform: translate(-50%, -50%) scale(0.8);
+opacity: 0;
+}
+to { 
+transform: translate(-50%, -50%) scale(1);
+opacity: 1;
+}
+}
+
+        .expandable-summary {
+        margin: 40px auto;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+    
+    .summary-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .summary-header h2 {
+        color: aliceblue;
+        font-size: 42px;
+        font-family: 'Fredoka', sans-serif;
+        text-shadow: 0 0 25px #6b4bf7;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    
+    .summary-header p {
+        color: #5a5a91;
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    
+    /* Expandable Items - Checkbox System */
+    .summary-toggle {
+        display: none;
+    }
+    
+    .summary-item {
+        background: linear-gradient(to right, rgba(107, 75, 247, 0.1), rgba(164, 111, 226, 0.1));
+        border-radius: 15px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(107, 75, 247, 0.3);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+    
+    .summary-item:hover {
+        border-color: rgba(107, 75, 247, 0.5);
+        box-shadow: 0 10px 25px rgba(107, 75, 247, 0.15);
+    }
+    
+    .summary-header-label {
+        padding: 20px 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+    
+    .summary-header-label:hover {
+        background: rgba(107, 75, 247, 0.15);
+    }
+    
+    .summary-title {
+        color: aliceblue;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 22px;
+        margin: 0;
+        flex: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    
+    .summary-arrow {
+        color: #fff894;
+        font-size: 24px;
+        transition: transform 0.3s ease;
+        width: 25px;
+        text-align: center;
+        margin-left: 15px;
+    }
+    
+    .summary-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0 25px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .summary-content-inner {
+        padding: 0 0 25px 0;
+        color: #ffffff;
+        line-height: 1.7;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+    }
+    
+    /* When checkbox is checked */
+    .summary-toggle:checked ~ .summary-content {
+        max-height: 1000px;
+    }
+    
+    .summary-toggle:checked ~ .summary-header-label .summary-arrow {
+        transform: rotate(180deg);
+    }
+    
+    .summary-toggle:checked ~ .summary-content .summary-content-inner {
+        opacity: 1;
+    }
+    
+    /* Content styling */
+    .summary-section {
+        margin-bottom: 20px;
+    }
+    
+    .summary-section h4 {
+        color: #3503fc;
+        font-size: 18px;
+        margin-bottom: 8px;
+        border-left: 3px solid #000000;
+        padding-left: 12px;
+        font-family: 'Fredoka', sans-serif;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    
+    .summary-section p {
+        margin: 0;
+        padding-left: 15px;
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Source links styling */
+    .source-links {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        border-radius: 10px;
+        margin: 15px 0;
+        border-left: 4px solid #6b4bf7;
+    }
+    
+    .source-link-item {
+        margin-bottom: 10px;
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    
+    .source-link-item:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    
+    .source-link-item a {
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+    }
+    
+    .source-link-item a:hover {
+        color: #ac9bff;
+        text-decoration: underline;
+    }
+    
+    .source-description {
+        color: #ffffff;
+        font-size: 14px;
+        margin-top: 5px;
+        padding-left: 10px;
+        font-style: italic;
+    }
+    
+    /* Quick facts grid */
+    .quick-facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .fact-item {
+        background: rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .fact-icon {
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .fact-text {
+        font-size: 14px;
+        color: #000000;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .summary-header h2 {
+            font-size: 32px;
+        }
+        
+        .summary-title {
+            font-size: 18px;
+        }
+        
+        .summary-header-label {
+            padding: 15px 20px;
+        }
+        
+        .summary-content {
+            padding: 0 20px;
+        }
+        
+        .quick-facts {
+            grid-template-columns: 1fr;
+        }
+        
+        .source-link-item a {
+            font-size: 14px;
+            word-break: break-word;
+        }
+    }
+</style>
+</head>
+
+<body style="background:linear-gradient(to bottom, #e695ff, #f8d5ff, #0051ff, #79ebff,  #bccbec);">
+
+    <div class="center-container">
+
+     <h1 style="color:aliceblue; font-size: 100px; font-family:'Fredoka'; text-shadow: 0 0 50px #ffffff; letter-spacing: 2px;"> BloxDaily</h1>
+
+     <p style="color:aliceblue; font-size: 20px; font-family:'Fredoka';  text-shadow: 0px -2px 20px rgb(0, 7, 173); font-weight: 900;">Welcome to BloxDaily! </p>
+     <p style="color:aliceblue; font-size: 20px; font-family:'Fredoka';  text-shadow: 0px -2px 20px rgb(0, 7, 173); font-weight: 900;">Dedicated news source built by and for the Roblox Community</p>
+
+   </div>
+
+  <div class="bottom-nav">
+
+    <a href="#home">HOME</a> 
+
+    <a href ="#news">NEWS</a> 
+
+    <a href="#features">FEATURES</a> 
+
+    <a href="#avatar-fashion" >AVATAR FASHION</a> 
+
+    <a href="#about-us" >ABOUT US</a>   
+
+  </div>
+
+  <form action="https://www.google.com/search" method="GET" target="_blank">
+    <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input 
+            class="search-input" 
+            type="search" 
+            name="q"
+            placeholder="Search BloxDaily content..."
+        >
+             <input type="hidden" name="as_sitesearch" value="YOUR-NETLIFY-URL.netlify.app">
+        <button type="submit" style="display:none">Search</button>
+    </div>
+</form>
+   
+<section id="home">
+
+<!--SUMMARY HOME SECTION-->
+<div class="id">
+        <div class="about-container">
+            <h1 class="about-title">Welcome to BloxDaily</h1>
+            <p class="about-subtitle">HOME</p>
+            
+            <div class="mission-card">
+                <h3 >🎯 Our Mission</h3>
+                <p style="color:#000000; font-family: 'Fredoka'; font-weight: 40px">To cut through the noise and deliver the most relevant, interesting, and timely news happening across the Roblox universe every single day.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔥</span>
+                    <h4>Hot Trends & Chart Toppers</h4>
+                    <p style="color:#000000;  font-family: 'Fredoka'; text-shadow: 0px -2px 0px rgb(255, 255, 255); font-weight: 100;">We highlight the games currently dominating the charts, explaining why they're trending and what makes them must-play experiences.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h4>Platform Deep Dives</h4>
+                    <p style="color:#000000;  font-family: 'Fredoka'; text-shadow: 0px -2px 0px rgb(255, 255, 255); font-weight: 100;">Get the latest on platform wide updates, developer announcements, and fashion shifts to stay current with the game itself.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📖</span>
+                    <h4>Stories Behind the Games</h4>
+                    <p style="color:#000000; font-family: 'Fredoka'; text-shadow: 0px -2px 0px rgb(255, 255, 255); font-weight: 100;">We cover the drama, successes, controversies, and community events that shape the Roblox landscape.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <p style="color:#ffffff;  font-family: 'Fredoka'; text-shadow: 0px -2px 13px rgb(0, 0, 0); font-weight: 350;">Every story includes direct links so you can jump in and explore for yourself. While Roblox boasts endless creation, BloxDaily does the heavy lifting, spotlighting only the most important trends.</p>
+                <div class="join-us">Join us daily to stay connected to the Hype of Roblox! 🎮</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="expandable-summary">
+    <div class="summary-header">
+        <h2>Roblox Platform Insights 2025</h2>
+        <p>Click on each section to expand and learn about the latest updates with source references</p>
+    </div>
+    
+    <!-- Item 2: Major Updates & Platform Changes -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-2" class="summary-toggle">
+        <label for="summary-toggle-2" class="summary-header-label">
+            <h3 class="summary-title">📱 Major Updates & Platform Changes</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>"Friends" → "Connections"</h4>
+                    <p>The platform has renamed "Friends" to "Connections." This change supports the introduction of "Trusted Connections," a feature for age-verified users (13+) designed to facilitate more personal interactions (like expressive chat) with people they know in real life.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Logo/Branding Color Change</h4>
+                    <p>The primary accent color for the Roblox logo and app interface has recently shifted to a vivid blue, replacing previous black or teal accents. This modernization move visually aligns the platform with large, mainstream social media and tech companies (like Facebook) to signal stability and maturity.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://devforum.roblox.com/t/connecting-with-confidence-on-roblox-introducing-trusted-connections-age-estimation-and-privacy-tools/3820020" target="_blank">
+                            Connecting with Confidence on Roblox: Introducing Trusted Connections, Age Estimation, and Privacy Tools
+                        </a>
+                        <div class="source-description">Roblox Developer Forum—Discusses the rename, Trusted Connections, and Expressive Chat for 13+ users.</div>
+                    </div>
+                    
+                    <div class="source-link-item">
+                        <a href="https://smart.dhgate.com/why-is-the-roblox-logo-blue-color-change-meaning-explained/" target="_blank">
+                            Why the Roblox Logo Changed to Blue: Meaning & History
+                        </a>
+                        <div class="source-description">Smart.DHgate—Discusses the strategic shift to blue to align with mainstream social media/tech for maturity and trust.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 3: New Features (Voice Chat) -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-3" class="summary-toggle">
+        <label for="summary-toggle-3" class="summary-header-label">
+            <h3 class="summary-title">🎤 New Features (Voice Chat)</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>Voice Chat Availability</h4>
+                    <p>Roblox officially supports Voice Chat (often referred to as "mic" use).</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Eligibility Requirements</h4>
+                    <p>The feature is restricted to eligible users aged 13 and older who have successfully verified their age, usually through an ID or phone check. It is available in experiences that support it.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://en.help.roblox.com/hc/en-us/articles/34506487825428-How-do-I-turn-on-Voice-Chat" target="_blank">
+                            How do I turn on Voice Chat?
+                        </a>
+                        <div class="source-description">Roblox Support—Confirms the 13+ age restriction and the requirement for phone or ID/age verification.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 4: International Restrictions -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-4" class="summary-toggle">
+        <label for="summary-toggle-4" class="summary-header-label">
+            <h3 class="summary-title">🌍 International Restrictions & Bans</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>International Scrutiny</h4>
+                    <p>Roblox is facing bans and restrictions in several countries, primarily over concerns about child safety and inappropriate content.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Banned/Restricted Countries (as of late 2025)</h4>
+                    <p>The platform is currently banned or restricted in regions like Kuwait, Qatar, Oman, Turkey, Jordan, and North Korea.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://www.lagofast.com/en/blog/roblox-blocked-countries-list/" target="_blank">
+                            Roblox Blocked Countries List 2025 and Solutions to Banned Countries
+                        </a>
+                        <div class="source-description">LagoFast—Details bans/restrictions in Turkey, Jordan, Qatar, and other countries due to content concerns.</div>
+                    </div>
+                    
+                    <div class="source-link-item">
+                        <a href="https://www.demandsage.com/is-roblox-shutting-down/" target="_blank">
+                            Roblox is banned in these countries? Here's all about global bans...
+                        </a>
+                        <div class="source-description">The Economic Times—Mentions bans in Turkey, Oman, Qatar, and China, citing child safety concerns.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 5: Social/Dating Platform Evolution -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-5" class="summary-toggle">
+        <label for="summary-toggle-5" class="summary-header-label">
+            <h3 class="summary-title">💞 Social/Dating Platform Evolution</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>Evolution to Metaverse</h4>
+                    <p>Roblox is actively evolving into a comprehensive "metaverse" or social co-experience platform for all ages, not just a children's game.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>CEO's Vision for Adult Dating</h4>
+                    <p>The platform's CEO, David Baszucki, has publicly suggested that Roblox could eventually serve as a virtual dating platform for adults (e.g., 17+ or 21+ ID-verified users) to combat loneliness.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Current Official Policy</h4>
+                    <p>Dating is BANNED: Despite the CEO's long-term vision, online dating, romantic gestures, and the solicitation of real-world romantic relationships are strictly prohibited for all users under the current Roblox Community Standards.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://timesofindia.indiatimes.com/sports/esports/news/i-think-of-roblox-as-a-platform-to-help-loneliness-ceo-suggests-roblox-could-become-a-dating-space-for-adults/articleshow/122577480.cms" target="_blank">
+                            "I think of Roblox as a platform to help loneliness": CEO suggests Roblox could become a dating space for adults
+                        </a>
+                        <div class="source-description">Times of India—Quotes CEO David Baszucki on the long-term vision to combat loneliness with adult social features.</div>
+                    </div>
+                    
+                    <div class="source-link-item">
+                        <a href="https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy" target="_blank">
+                            Roblox Community Standards (Romantic and Sexual Content Section)
+                        </a>
+                        <div class="source-description">Roblox Support—Strictly prohibits romantic or flirtatious gestures and the solicitation of real-world romantic relationships.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 6: Educational Tool -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-6" class="summary-toggle">
+        <label for="summary-toggle-6" class="summary-header-label">
+            <h3 class="summary-title">🎓 Educational Tool & Virtual Classrooms</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>Active Educational Use</h4>
+                    <p>Roblox is already used as an educational tool by teachers and external tutoring programs worldwide. The platform offers Roblox Studio, a free development tool that allows students to learn computer science, coding (Lua language), game design, and digital entrepreneurship.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Immersive Learning</h4>
+                    <p>Educational experiences on the platform (often developed in collaboration with organizations like Google, NWEA, and AVID) bring subjects like STEM (chemistry, physics), online safety, history, and social-emotional learning to life in immersive 3D worlds.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Virtual Classes</h4>
+                    <p>Roblox has a dedicated Education Program and provides tools for educators to create private servers and customized learning environments, enabling virtual classrooms, remote collaboration, and interactive virtual field trips.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://corp.roblox.com/education" target="_blank">
+                            Educational experiences available on Roblox
+                        </a>
+                        <div class="source-description">Roblox Corporate—Highlights official educational experiences in collaboration with organizations like Google and AVID, covering STEM, coding, and immersive learning.</div>
+                    </div>
+                    
+                    <div class="source-link-item">
+                        <a href="https://timedooracademy.com/blog/coding-game-roblox-for-kids/" target="_blank">
+                            Roblox and how it can help as part of your childs STEM education
+                        </a>
+                        <div class="source-description">Kids Coding Academy—Discusses the use of Roblox Studio for learning coding and STEM concepts.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 7: Parents' Perspective -->
+    <div class="summary-item">
+        <input type="checkbox" id="summary-toggle-7" class="summary-toggle">
+        <label for="summary-toggle-7" class="summary-header-label">
+            <h3 class="summary-title">👨‍👩‍👧‍👦 Parents' Perspective & Safety</h3>
+            <span class="summary-arrow">▼</span>
+        </label>
+        <div class="summary-content">
+            <div class="summary-content-inner">
+                <div class="summary-section">
+                    <h4>Ongoing Safety Concerns</h4>
+                    <p>Despite the introduction of new AI moderation tools, significant concerns remain regarding the platform's ability to protect children from exposure to inappropriate content (like "sex club" or "condo" games) and predatory behavior.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>Parental Responsibility</h4>
+                    <p>The consensus is that active parental control and supervision are critical. Parents are urged to customize all available controls (like chat/content restrictions), monitor their children's connections, and educate them on online safety.</p>
+                </div>
+                
+                <div class="source-links">
+                    <div class="source-link-item">
+                        <a href="https://english.elpais.com/technology/2025-11-19/roblox-the-video-game-where-millions-of-children-interact-with-strangers.html" target="_blank">
+                            Roblox: The video game where millions of children interact with strangers
+                        </a>
+                        <div class="source-description">EL PAÍS English—A recent article that summarizes ongoing safety concerns, the insufficiency of age verification, and the critical need for active parental supervision and controls.</div>
+                    </div>
+                    
+                    <div class="source-link-item">
+                        <a href="https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ" target="_blank">
+                            Parental Controls FAQ
+                        </a>
+                        <div class="source-description">Roblox Support—Explains the full suite of controls available for parents, including linked accounts, screen time, content maturity, and spend limits.</div>
+                    </div>
+                </div>
+                
+                <div class="quick-facts">
+                    <div class="fact-item">
+                        <span class="fact-icon">🔒</span>
+                        <div class="fact-text">Use parental controls</div>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">👁️</span>
+                        <div class="fact-text">Monitor connections</div>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-icon">📚</span>
+                        <div class="fact-text">Educate on safety</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--END OF SUMMARY HOME-->
+
+<!-- NEWS SECTION-->
+<div class="news">
+    <section id="news">
+        
+    <h2 style="margin-top: 200px; font-size: 70px; color: aliceblue; text-align: center; margin-bottom: 10px; text-shadow: 0 0 20px #4c6ace;">Latest News</h2>
+    </section>
+    
+    <div class="group">
+            <!-- News 1 -->
+        <div class="popup-container">
+            <input type="checkbox" id="popup-toggle-1" class="popup-toggle">
+            <label for="popup-toggle-1" class="card">
+                <img src="https://i.ytimg.com/vi/RF73c36qk20/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDr2xIOKhrVUWzQh_yK81rB-xfaZg">
+            </label>
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <label for="popup-toggle-1" class="popup-close">×</label>
+                <h3 class="popup-title">⚔️ The Grow a Garden vs. Steal a Brainrot “Admin War”</h3>
+                <p class="popup-text">This "Admin War" in August 2025 drove the platform's record-breaking concurrent user count (CCU).
+​Source Link (Admin War and Platform Record): Developer beef just helped Roblox set a 47-million-player record (Tubefilter)
+​Source Link (Game CCU Records): Steal a Brainrot - Wikipedia (Details the 22.3M Grow a Garden CCU, the platform record, and the rivalry).</p>
+<a class="popup-text" 
+   href="https://growagarden.fandom.com/wiki/Admin_Abuse_War" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    Admin Abuse War
+</a>
+            </div>
+        </div>
+        <!-- News 2 -->
+        <div class="popup-container">
+            <input type="checkbox" id="popup-toggle-2" class="popup-toggle">
+            <label for="popup-toggle-2" class="card">
+                <img src="https://i.tribune.com.pk/media/images/fizza-61753608752-0/fizza-61753608752-0.png">
+            </label>
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <label for="popup-toggle-2" class="popup-close">×</label>
+                <h3 class="popup-title">New Game Release</h3>
+                <p class="popup-text"> 🏈 Travis Kelce’s Surprise Grow a Garden Admin Takeover
+​The event on July 26, 2025, was widely covered, particularly on YouTube and in gaming digests, confirming the football-themed rewards and "Admin Abuse" structure.</p>
+<a class="popup-text" 
+   href="https://tribune.com.pk/story/2558108/travis-kelce-surprises-roblox-fans-with-grow-a-garden-appearance-and-exclusive-in-game-event" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    Travis Kelce surprises Roblox fans with 'Grow a Garden' appearance </a>
+            </div>
+        </div>
+
+        <!-- News 3 -->
+        <div class="popup-container">
+            <input type="checkbox" id="popup-toggle-3" class="popup-toggle">
+            <label for="popup-toggle-3" class="card">
+                <img src="https://billboardphilippines.com/wp-content/uploads/2025/08/lady-gaga-roblox-ftr-img.jpg">
+            </label>
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <label for="popup-toggle-3" class="popup-close">×</label>
+                <h3 class="popup-title">Celebrity Collaboration</h3>
+                <p class="popup-text">A famous celebrity has partnered with Roblox.👑 Lady Gaga’s Dress to Impress Event Controversy
+​The controversy centered on the "meet and greet" being restricted to influencers, leading to an official apology from the game's creators.</p>
+<a class="popup-text" 
+   href="https://www.indiatimes.com/trending/lady-gaga-joins-roblox-for-dress-to-impress-event-amid-child-safety-concerns-sparks-outrage-among-fans-on-social-media/articleshow/123950037.html" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    Dress to Impress Lady Gaga Event Sparks Outrage With Roblox Players (Vice Magazine)</a>
+            </div>
+        </div>
+
+        <!-- News 4 -->
+        <div class="popup-container">
+            <input type="checkbox" id="popup-toggle-4" class="popup-toggle">
+            <label for="popup-toggle-4" class="card">
+                <img src="https://insider-gaming.com/wp-content/uploads/2025/05/grow-a-garden-update.png">
+            </label>
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <label for="popup-toggle-4" class="popup-close">×</label>
+                <h3 class="popup-title">Garden Update</h3>
+                <p class="popup-text">New gardening features have been added to popular games. 🌱 Grow a Garden Shatters Records and Reaches Global TV News
+​This achievement was tied to the Admin War event but was reported as a major global gaming milestone.</p>
+           <a class="popup-text" 
+   href=" https://www.bbc.com/news/articles/cj4edkdxz2xo" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    Grow a Garden: The surprise Roblox gaming hit </a> 
+        </div>
+        </div>
+
+        <!-- News 5 -->
+        <div class="popup-container">
+            <input type="checkbox" id="popup-toggle-5" class="popup-toggle">
+            <label for="popup-toggle-5" class="card">
+                <img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2023/tvpatrol/01/12/virtual-sinulog.jpg">
+            </label>
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <label for="popup-toggle-5" class="popup-close">×</label>
+                <h3 class="popup-title">Virtual Events</h3>
+                <p class="popup-text">Roblox continues to host virtual cultural events. 🇵🇭 Roblox Player Group Hosts Virtual Sinulog Festival (with Second Opinion)
+​The news covers the cultural significance of the virtual event, alongside the persistent, broader controversy regarding safety and moderation in the Philippines, which often surfaces in local media coverage.</p>
+                       <a class="popup-text" 
+   href="https://www.rappler.com/philippines/visayas/young-filipino-catholics-bring-cebu-sinulog-fiesta-senor-roblox-january-2024/" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    Young Filipino Catholics bring Cebu’s Sinulog and Fiesta Señor to Roblox</a> 
+
+            </div>
+        </div>
+    
+</div>
+    
+
+
+<!--FEATURES-->
+    <div class="features-container">
+    <div class="features">
+         <div class="feature-column">
+    <section id="features">
+<h2 style= "margin-top: 20px;" >Top 10 most played games in roblox</h2>
+      <!-- Top 10 Most played Games-->
+<div class="scroll-box"> 
+    
+    <!-- Game 1 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-6" class="popup-toggle">
+                 <label for="popup-toggle-6" class="group3">
+                     <img src="https://tr.rbxcdn.com/180DAY-b04210e344ce8c44435ad5389f8a3bdc/256/256/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-6" class="popup-close">×</label>
+                     <h3 class="popup-title"> Brookhaven RP
+</h3>
+                     <p class="popup-text">• What It's About: A dominant, pure role-playing game (RPG) set in a city where players freely choose their life, character,
+home, and vehicles. It is centered around open-ended imaginative play and social interaction.
+• Player Statistics: Boasts a platform-record 74.36 Billion Lifetime Visits and regularly maintains over 685,000 Concurrent
+Players (CCU).          
+</p>                 <a class="popup-text" 
+   href="https://www.roblox.com/share?code=ab18dd2dffa45c4091db391e15895fee&type=ExperienceDetails&stamp=1763605666904"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Brookhaven RP</a> 
+
+                    
+
+                </div>
+              </div>
+
+    <!-- Game 2 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-7" class="popup-toggle">
+                 <label for="popup-toggle-7" class="group3">
+    <img src="https://tr.rbxcdn.com/180DAY-131fe0ee5660ffa7a5fc58fa96cfc0a1/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-7" class="popup-close">×</label>
+                     <h3 class="popup-title"> Adopt Me!</h3>
+                     <p class="popup-text">
+• What It's About: A highly popular role-playing and collection game that shifted its main focus to adopting, raising, and
+trading virtual pets, in addition to customizing player homes.
+• Player Statistics: Has achieved a peak of 1.92 Million Concurrent Players and maintains high engagement with tens of
+millions of monthly users.</p>
+
+     <a class="popup-text" 
+     href="https://www.roblox.com/share?code=f48693c46dacfc4e983f8cbc88910ba6&type=ExperienceDetails&stamp=1763605916972"
+    target="_blank" 
+     rel="noopener noreferrer">
+      Game link: Adopt Me!</a> 
+                </div>
+              </div>
+
+    <!-- Game 3 -->
+    <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-8" class="popup-toggle">
+                 <label for="popup-toggle-8" class="group3">
+   <img src="https://tr.rbxcdn.com/180DAY-643b9b9285f3bd9b63cf392db12a4d87/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-8" class="popup-close">×</label>
+                     <h3 class="popup-title">99 Nights in the Forest</h3>
+                     <p class="popup-text">
+• What It's About: A survival-horror game where players must gather resources and build a fortified camp to survive against
+waves of strange creatures and cultists over multiple nights.
+• Player Statistics: Has amassed over 16.4 Billion Visits and reached a recent popularity peak with a very high number of
+concurrent users.
+</p>
+            <a class="popup-text" 
+             href="https://www.roblox.com/share?code=e3c9337f72dafc49adef9295b04eaa0a&type=ExperienceDetails&stamp=1763605971192"
+             target="_blank" 
+             rel="noopener noreferrer">
+             99 Nights in the Forest</a> 
+
+                </div>
+              </div>
+
+
+
+    <!-- Game 4 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-9" class="popup-toggle">
+                 <label for="popup-toggle-9" class="group3">
+            <img src="https://tr.rbxcdn.com/180DAY-a933a9ba765efea4061f4a101f18edd2/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-9" class="popup-close">×</label>
+                     <h3 class="popup-title">Plants vs. Brainrots</h3>
+                     <p class="popup-text">
+• What It's About: A tower-defense and progression game where players plant specialized "plants" to defend their garden
+from waves of enemies called "Brainrots," which can then be collected to generate passive income.
+• Player Statistics: Saw a significant climb in 2025 due to its progression loop and is one of the top performers on the platform.</p>
+
+                <a class="popup-text" 
+                 href="https://www.roblox.com/share?code=36f9478e9386384a84a1bf5c7b97810b&type=ExperienceDetails&stamp=1763606002808"
+                 target="_blank" 
+                rel="noopener noreferrer">
+                 Plants vs. Brainrots</a> 
+                </div>
+              </div>
+
+
+
+
+    <!-- Game 5 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-10" class="popup-toggle">
+                 <label for="popup-toggle-10" class="group3">
+            <img src="https://tr.rbxcdn.com/180DAY-b6ad9f8a2edddee0365eed4f19a8caf9/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-10" class="popup-close">×</label>
+                     <h3 class="popup-title"> Steal a Brainrot</h3>
+                     <p class="popup-text">
+• What It's About: A competitive tycoon/base-defense game where players generate cash using Brainrots stored in their base,
+with the key mechanic being the ability to actively steal Brainrots from other players' unlocked bases.
+• Player Statistics: Achieved a massive peak of 24 Million Concurrent Users (CCU) in September 2025 and has surpassed 7
+Billion Visits..</p>
+
+                <a class="popup-text" 
+                 href="https://www.roblox.com/share?code=ff9b804a8834bd45a6464f4f3f168985&type=ExperienceDetails&stamp=1763606029772"
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                 Steal a brainrot</a>
+                </div>
+              </div>
+
+
+
+    <!-- Game 6 -->
+    <div class="popup-container">
+    <input type="checkbox" id="popup-toggle-11" class="popup-toggle">
+    <label for="popup-toggle-11" class="group3">
+    <img src="https://tr.rbxcdn.com/180DAY-be35f2073fc57acf2b029d4263e94790/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-11" class="popup-close">×</label>
+                     <h3 class="popup-title"> Fish It!</h3>
+                     <p class="popup-text">
+• What It's About: A straightforward and highly engaging fishing simulator where players acquire gear, fish in various zones,
+and upgrade their equipment to catch more valuable fish.
+• Player Statistics: Has exceeded 1.1 Billion Lifetime Visits and currently sees a high engagement with around 708,000
+Concurrent Players (CCU).
+</p>
+
+<a class="popup-text" 
+   href=" https://www.roblox.com/share?code=1f589a670d83904782f9274b34da8e9d&type=ExperienceDetails&stamp=1763606062008"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Fish It!</a>
+                </div>
+              </div>
+
+
+    <!-- Game 7 -->
+    <div class="popup-container">
+     <input type="checkbox" id="popup-toggle-12" class="popup-toggle">
+    <label for="popup-toggle-12" class="group3">
+    <img src="https://tr.rbxcdn.com/180DAY-134b47130e25f3c688ebd1ab54456e01/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-12" class="popup-close">×</label>
+                     <h3 class="popup-title">Blox Fruits</h3>
+                     <p class="popup-text">
+• What It's About: An action-adventure RPG heavily inspired by the anime One Piece, where players master fighting styles, use
+special "Blox Fruits" that grant unique powers, and battle enemies across the sea.
+• Player Statistics: A perennial top game, it has recorded over 22 Billion Total Sessions and often reaches peaks well over 1
+Million Concurrent Players.</p>
+
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=cb395c1f54a59e4dac9b0976448215bb&type=ExperienceDetails&stamp=1763606089580"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Blox Fruits!</a>
+                </div>
+              </div>
+
+
+
+    <!-- Game 8 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-13" class="popup-toggle">
+                 <label for="popup-toggle-13" class="group3">
+            <img src="https://tr.rbxcdn.com/180DAY-91f8ec73480a974786806c66d92dd30e/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-13" class="popup-close">×</label>
+                     <h3 class="popup-title">Grow a Garden</h3>
+                     <p class="popup-text">
+• What It's About: A popular farming-themed idle game where the core loop involves buying seeds, planting them, and
+harvesting crops for in-game currency, with the feature that the garden continues to grow while the player is offline.
+• Player Statistics: Holds the record for one of the highest concurrent player counts ever on the platform, peaking at 22.3
+Million CCU, and is the fastest game to reach 1 Billion Visits.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=83f027faecd4274f90ea4edfcc9516be&type=ExperienceDetails&stamp=1763606118865"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Grow a Garden!</a>
+                </div>
+              </div>
+
+
+
+
+    <!-- Game 9 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-14" class="popup-toggle">
+                 <label for="popup-toggle-14" class="group3">
+     <img src="https://tr.rbxcdn.com/180DAY-ccd8bcf9f66dc37834534d2cb3cfd1b9/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-14" class="popup-close">×</label>
+                     <h3 class="popup-title">The Strongest of the Strong</h3>
+                     <p class="popup-text">
+• What It's About: Likely a highly-rated fighting or battlegrounds game (similar to The Strongest Battlegrounds which has over
+15.1 Billion Visits) where players train and battle to become the most powerful character.
+• Player Statistics: A recent and highly-rated title expected to maintain popularity; a related fighting game, The Strongest
+Battlegrounds, has 15.1 Billion Visits and over 114,000 Concurrent Players.</p>
+
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=3e746d21f7b96748a006b610b6091d20&type=ExperienceDetails&stamp=1763606199036"
+   target="_blank" 
+   rel="noopener noreferrer">
+    The Strongest of the Strong</a>
+                </div>
+              </div>
+
+
+
+    <!-- Game 10 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-15" class="popup-toggle">
+                 <label for="popup-toggle-15" class="group3">
+    <img src="https://tr.rbxcdn.com/180DAY-963a6c96cce435271e6c8563836b4d4c/512/512/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-15" class="popup-close">×</label>
+                     <h3 class="popup-title"> Jailbreak</h3>
+                     <p class="popup-text">
+• What It's About: A classic and highly successful open-world action RPG where players choose to either be a Police Officer
+enforcing the law or a Criminal attempting daring escapes and lucrative robberies.
+• Player Statistics: An enduring favorite that has amassed a monumental total of over 7.6 Billion Visits since its release.</p>
+
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=57e3de8eb1bdaa41ad71a9440a589848&type=ExperienceDetails&stamp=1763606243258"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Jailbreak</a>
+                </div>
+              </div>
+</div>
+</div>
+</div>
+
+    </section>
+        
+       <!--Top 10 roblox games that had a downfall-->
+       <div class="features-container">
+ <div class="features">
+     <div class="feature-column">
+    <section id="features2">
+      
+              <h2>Top 10 roblox games that had a downfall</h2>
+         <div class="scroll-box">
+
+                 <!-- Game 1 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-16" class="popup-toggle">
+                 <label for="popup-toggle-16" class="group3">
+                  <img src="https://tr.rbxcdn.com/180DAY-8d7d220c927ef2be12d05d9ed11f579e/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-16" class="popup-close">×</label>
+                     <h3 class="popup-title"> MeepCity </h3>
+                     <p class="popup-text"> MeepCity  suffered a catastrophic downfall from a regular peak of over
+100,000 CCU to only about ~267 CCU after Roblox removed it from the
+front page due to serious moderation and safety concerns regarding its
+social features.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=cf3fb9f681354445b9fff7d6b04b6ff8&type=ExperienceDetails&stamp=1763607166842"
+   target="_blank" 
+   rel="noopener noreferrer">
+    MeepCity</a>
+                </div>
+              </div>
+
+                 <!-- Game 2 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-17" class="popup-toggle">
+                 <label for="popup-toggle-17" class="group3">
+                  <img src="https://tr.rbxcdn.com/180DAY-21473efe7eeed8124eeb41e818a8f8e6/768/432/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-17" class="popup-close">×</label>
+                     <h3 class="popup-title">Royale High</h3>
+                     <p class="popup-text">Royale High saw its concurrent player count drop dramatically from over
+170,000 to about ~8,600 CCU because a multi-year content drought—
+caused by the slow development of the new school—resulted in severe
+player fatigue from the item grind.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=08c3de3d95861c4d8f2c107d0489aac6&type=ExperienceDetails&stamp=1763607260472"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Royale High</a>
+                </div>
+              </div>
+
+                  <!-- Game 3 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-18" class="popup-toggle">
+                 <label for="popup-toggle-18" class="group3">
+                 <img src="https://tr.rbxcdn.com/180DAY-021b663cffeb40dde265e990003f2f75/512/512/Image/Webp/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-18" class="popup-close">×</label>
+                     <h3 class="popup-title">Fashion Famous</h3>
+                     <p class="popup-text">Fashion Famous declined from a regular peak of over 40,000 CCU to only
+~3,000–5,000 CCU because it was outcompeted by newer fashion games
+like Dress to Impress that offered fresher and more engaging mechanics.</p>
+<a class="popup-text" 
+   href="https://ro.blox.com/Ebh5?pid=share&is_retargeting=true&af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D225431369&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F568350650"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Fashion Famous</a>
+                </div>
+              </div>
+              
+                 <!-- Game 4 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-19" class="popup-toggle">
+                 <label for="popup-toggle-19" class="group3">
+             <img src="https://tr.rbxcdn.com/180DAY-43b8c5238a32aaed2cbd1a5e0826919f/500/280/Image/Jpeg/noFilter">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-19" class="popup-close">×</label>
+                     <h3 class="popup-title">Murder Mystery 2</h3>
+                     <p class="popup-text">Murder Mystery 2 (MM2) declined from high peaks of over 100,000 CCU to a
+sustained ~25,000–35,000 CCU due to the repetitive nature of the core
+loop and a general decline in player interest for the aging classic game
+formula.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=5c1467e6e5f8b64f96cd6d7d0ba258c7&type=ExperienceDetails&stamp=1763607381522"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Murder Mystery 2</a>
+                </div>
+              </div>
+
+                 <!-- Game 5 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-20" class="popup-toggle">
+                 <label for="popup-toggle-20" class="group3">
+                   <img src="https://static.wikia.nocookie.net/workatapizzaplace/images/8/81/Image23.webp/revision/latest/thumbnail/width/360/height/360?cb=20250124212631">
+                 </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-20" class="popup-close">×</label>
+                     <h3 class="popup-title">Work at a Pizza Place</h3>
+                     <p class="popup-text">Work at a Pizza Place experienced a natural decline from peaks over 25,000
+CCU to a stable ~11,900 CCU as a result of its age (2008 release) and the
+rise of more modern and complex role-playing simulators.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=915e45e8482da643b8e3a211ba89b089&type=ExperienceDetails&stamp=1763607455279"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Work at a Pizza Place</a>
+                </div>
+              </div>
+                 
+                 
+                 <!-- Game 6 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-21" class="popup-toggle">
+                 <label for="popup-toggle-21" class="group3">
+                    <img src="https://tr.rbxcdn.com/180DAY-0fe7bcc9144a2b79dd7e6a34dfc89596/500/280/Image/Jpeg/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-21" class="popup-close">×</label>
+                     <h3 class="popup-title">Hide and Seek</h3>
+                     <p class="popup-text">Hide and Seek Extreme dropped from over 15,000 CCU to only ~1,000–
+2,000 CCU because a lack of significant new maps or game modes over
+time caused the simple core mechanic to lose novelty for the player base.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=144d5fcf6e9cf741bbc842c5aea8a14f&type=ExperienceDetails&stamp=1763607541857"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Hide and Seek</a>
+                </div>
+              </div>
+
+                
+                 <!-- Game 7 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-22" class="popup-toggle">
+                 <label for="popup-toggle-22" class="group3">
+                   <img src="https://tr.rbxcdn.com/180DAY-58902d4509da3f50ea893b5e2dcc935d/768/432/Image/Webp/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-22" class="popup-close">×</label>
+                     <h3 class="popup-title">Growing Up</h3>
+                     <p class="popup-text">Growing Up saw its initial high of over 30,000 CCU fall to about ~4,000–6,000
+CCU because the finite nature of its life simulation meant there was little
+replay value once players completed a "life."</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=d1b19aabafc12a429d4b13410f231f44&type=ExperienceDetails&stamp=1763607608630"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Growing Up</a>
+                </div>
+              </div>
+       
+
+                
+                 <!-- Game 8 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-23" class="popup-toggle">
+                 <label for="popup-toggle-23" class="group3">
+                   <img src="https://tr.rbxcdn.com/180DAY-9b827b2f6927b039ec508bf133bedd9a/512/512/Image/Webp/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-23" class="popup-close">×</label>
+                     <h3 class="popup-title">Natural Disaster Survival</h3>
+                     <p class="popup-text">Natural Disaster Survival has settled from a peak of over 30,000 CCU to
+about ~10,400 CCU as a classic title whose simple and repetitive survival
+loop was eventually surpassed by more complex games in the genre.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=a569ca7bee3d4c48a3a8a7fb977dd133&type=ExperienceDetails&stamp=1763607693711"
+   target="_blank" 
+   rel="noopener noreferrer">
+    Natural Disaster Survival</a>
+                </div>
+              </div>
+
+                
+                 <!-- Game 9 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-24" class="popup-toggle">
+                 <label for="popup-toggle-24" class="group3">
+                   <img src="https://tr.rbxcdn.com/180DAY-c2ef676cc43fc770276478770fd846e5/500/280/Image/Jpeg/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-24" class="popup-close">×</label>
+                     <h3 class="popup-title">3008 (SCP-3008)</h3>
+                     <p class="popup-text">3008 (SCP-3008) declined from peaks over 60,000 CCU to about ~15,000–
+20,000 CCU because its inherently repetitive horror/survival gameplay loop
+lost its fear factor once players mastered base-building and survival
+strategies.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=c9653e566d7b984d8405b5fef1875fd4&type=ExperienceDetails&stamp=1763607777008"
+   target="_blank" 
+   rel="noopener noreferrer">
+    3008 (SCP-3008)</a>
+                </div>
+              </div>
+
+                <!-- Game 10 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-25" class="popup-toggle">
+                 <label for="popup-toggle-25" class="group3">
+                     <img src="https://m.media-amazon.com/images/M/MV5BYzhhZTAwZmYtMGY0MC00NDZhLTg2ZDEtNzQ0YjNkY2U1NTc5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-25" class="popup-close">×</label>
+                     <h3 class="popup-title">Mini Games</h3>
+                     <p class="popup-text">.Mini Games (Various Titles) suffered a massive drop as a genre because the
+audience was fragmented when popular mini-game concepts were split off
+and developed into hundreds of more dedicated, single-focus games by
+other creators.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=1a986475f6672a479f5863d410b84bc3&type=ExperienceDetails&stamp=1763607992037"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Mini Games</a>
+                </div>
+              </div>
+    </section>
+</div>
+</div>
+</div>
+  
+     <div class="features-container">
+<div class="features">
+     <div class="feature-column">
+    <section id="features3">
+       <h2>Top 5 games inspired by media</h2>
+       <div style="margin-top: 50px;">
+
+        
+               <!-- Game 1 -->
+     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-26" class="popup-toggle">
+                 <label for="popup-toggle-26" class="group3">
+             <img src="https://tr.rbxcdn.com/180DAY-eeb754830041c5f9ddfd168242949f14/768/432/Image/Webp/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-26" class="popup-close">×</label>
+                     <h3 class="popup-title">Ink Game</h3>
+                     <p class="popup-text">Ink Game: This game is a high-stakes survival experience modeled after the Netflix
+series Squid Game. It recreates the deadly challenges, such as "Red Light, Green
+Light."</p> 
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=71828de35b7dd644a5ab906c04a9c81a&type=ExperienceDetails&stamp=1763608096589"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Ink Game</a>
+                </div>
+              </div>
+       
+       
+                <!-- Game 2 -->
+                     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-27" class="popup-toggle">
+                 <label for="popup-toggle-27" class="group3">
+             <img src="https://static.wikia.nocookie.net/mimic/images/d/d0/SomethingIsNotTheSame.png/revision/latest?cb=20251119063228">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-27" class="popup-close">×</label>
+                     <h3 class="popup-title">The Mimic</h3>
+                     <p class="popup-text">The Mimic: A deeply unsettling psychological horror game that draws heavily on
+Japanese Urban Legends and creepypasta. It uses multiple chapters and detailed
+environments to create a terrifying experience.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=61184ed9e6f37e4784c1707936bdb451&type=ExperienceDetails&stamp=1763608162221"
+   target="_blank" 
+   rel="noopener noreferrer">
+   The Mimic</a>
+                </div>
+              </div>
+       
+
+                <!-- Game 3 -->
+                     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-28" class="popup-toggle">
+                 <label for="popup-toggle-28" class="group3">
+              <img src="https://tr.rbxcdn.com/180DAY-87bbe124dd52a8d4f8c1abe274b53c0c/500/280/Image/Jpeg/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-28" class="popup-close">×</label>
+                     <h3 class="popup-title">The Walk Or Die</h3>
+                     <p class="popup-text">The Walk Or Die: This endurance thriller is inspired by the Stephen King novella The
+Long Walk. Players are forced to participate in a constant, grim march where they
+face elimination for slowing down or stopping.</p>
+<a class="popup-text" 
+   href="
+https://www.roblox.com/share?code=bae2eb7474d0a4479535abafbcc81b0e&type=ExperienceDetails&stamp=1763608215117"
+   target="_blank" 
+   rel="noopener noreferrer">
+   The Walk Or Die</a>
+                </div>
+              </div>
+       
+       
+                <!-- Game 4 -->
+                     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-29" class="popup-toggle">
+                 <label for="popup-toggle-29" class="group3">
+             <img src="https://tr.rbxcdn.com/180DAY-114e140e499cb7521f758bf33624c783/768/432/Image/Webp/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-29" class="popup-close">×</label>
+                     <h3 class="popup-title">Ro-Wizard</h3>
+                     <p class="popup-text">Ro-Wizard: An immersive fantasy role-playing game that allows users to attend a
+magic school, learn spells, and explore a large castle, clearly inspired by the Harry
+Potter book and film series.
+</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=70b5d5d51ba2db478d32ea0a0deffc99&type=ExperienceDetails&stamp=1763608267742"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Ro-Wizard</a>
+                </div>
+              </div>
+       
+
+                <!-- Game 5 -->
+                     <div class="popup-container">
+                 <input type="checkbox" id="popup-toggle-30" class="popup-toggle">
+                 <label for="popup-toggle-30" class="group3">
+              <img src="https://tr.rbxcdn.com/180DAY-49f3e9552b12d6a1725079f7657b860e/500/280/Image/Jpeg/noFilter">
+                   </label>
+                        <div class="popup-overlay"></div>
+                         <div class="popup-content">
+            <label for="popup-toggle-30" class="popup-close">×</label>
+                     <h3 class="popup-title">Attack on Titan Revolution</h3>
+                     <p class="popup-text">Attack on Titan Revolution: This is an action combat game where players use
+specialized gear to swing through cities and engage in high-flying battles against
+giant enemies, based directly on the Attack on Titan anime and manga series.</p>
+<a class="popup-text" 
+   href="https://www.roblox.com/share?code=680656b6e58a9a44b5c584c4760a5caa&type=ExperienceDetails&stamp=1763608308673"
+   target="_blank" 
+   rel="noopener noreferrer">
+   Attack on Titan Revolution</a>
+                </div>
+              </div>
+            </div>
+            </div>
+             </div>
+    </section>
+</div> 
+</div>
+</div>
+       
+
+<div class="avatar-fashion">
+    <section id="avatar-fashion">
+        <h1 style="color:aliceblue; font-size: 80px; font-family:'Fredoka'; text-shadow: 0 0 50px #6b4bf7; letter-spacing: 2px; text-align:center;">
+            Avatar Fashion
+        </h1>
+        
+        <div class="HiMaam">
+            <div class="ByeMaam">
+                
+                <!-- Fashion 1 -->
+                <div class="fashion-item">
+                    <input type="checkbox" id="popup-toggle-31" class="popup-toggle">
+                    <div class="popup-container">
+                        <label for="popup-toggle-31" class="group4">
+                            <img src="https://www.durbinrock.com/wp-content/uploads/2025/08/IMG_8820-scaled-e1755610306523.png" 
+                                 style="height:400px;width:275px;">
+                        </label>
+                    </div>
+                    <div class="popup-overlay"></div>
+                    <div class="popup-content">
+                        <label for="popup-toggle-31" class="popup-close">×</label>
+                        <h3 class="popup-title">Viral Meme Avatars and Community Allegiance</h3>
+                        <p class="popup-text">
+                            The "Green Bean" Trend: This is one of the most widespread meme avatars on the platform. 
+                            It is a simple, all-green character, often featuring a basic hood and a squat, simplistic body shape.<br><br>
+                            Origin and Function: The trend gained popularity through a public rivalry between the creators 
+                            of games like Grow a Garden and Steal a Brainrot. The avatar is worn as a means of showing 
+                            community allegiance or participating in platform-wide meme culture.
+                        </p>
+                    
+                    </div>
+                </div>
+                
+                <!-- Fashion 2 -->
+                <div class="fashion-item">
+                    <input type="checkbox" id="popup-toggle-32" class="popup-toggle">
+                    <div class="popup-container">
+                        <label for="popup-toggle-32" class="group4">
+                            <img src="https://i.pinimg.com/170x/6b/2e/9c/6b2e9c5f48e00e0a6a5961d972570188.jpg" 
+                                 style="height:400px;width:275px;">
+                        </label>
+                    </div>
+                    <div class="popup-overlay"></div>
+                    <div class="popup-content">
+                        <label for="popup-toggle-32" class="popup-close">×</label>
+                        <h3 class="popup-title">The Drive for Realism (Zepeto-Style)</h3>
+                        <p class="popup-text">
+                            The Roblox avatar style is shifting towards hyper-customization and social realism, 
+                            influenced by platforms like Zepeto.<br><br>
+                            Key Drivers: This evolution is enabled by the adoption of Rthro (Realistic Humanoid) bodies 
+                            and the expansion of the UGC (User-Generated Content) Marketplace.<br><br>
+                            Core Aesthetics: Current fashion emphasizes 3D Layered Clothing (allowing fabric to drape naturally), 
+                            highly detailed textures, and Dynamic Heads (enabling expressive facial animations) to create 
+                            a more realistic and detailed digital identity.
+                        </p>
+           
+                    </div>
+                </div>
+                
+                <!-- Fashion 3 -->
+                <div class="fashion-item">
+                    <input type="checkbox" id="popup-toggle-33" class="popup-toggle">
+                    <div class="popup-container">
+                        <label for="popup-toggle-33" class="group4">
+                            <img src="https://i.pinimg.com/474x/87/04/76/870476a4a659edbc165ca3f67015afb3.jpg" 
+                                 style="height:400px;width:275px;">
+                        </label>
+                    </div>
+                    <div class="popup-overlay"></div>
+                    <div class="popup-content">
+                        <label for="popup-toggle-33" class="popup-close">×</label>
+                        <h3 class="popup-title">High-Status and Exclusivity Trends</h3>
+                        <p class="popup-text">
+                            Expensive and limited-time cosmetic items remain dominant indicators of a player's status and wealth.<br><br>
+                            Headless Avatar: This look is achieved by owning the Headless Horseman bundle (costing approximately 31,000 Robux), 
+                            which is typically a limited-time item. The appearance of an invisible head signifies wealth and veteran status.<br><br>
+                            "Fake Headless": Due to the high cost, cheaper UGC accessories are frequently used to mimic the headless look.<br><br>
+                            Korblox "Stick Leg": This look results from purchasing the Korblox Deathspeaker bundle (approximately 17,000 Robux). 
+                            It gives the avatar a thin, stylized leg, marking the player as high-status.
+                        </p>
+                       
+                    </div>
+                </div>
+                
+                <!-- Fashion 4 -->
+                <div class="fashion-item">
+                    <input type="checkbox" id="popup-toggle-34" class="popup-toggle">
+                    <div class="popup-container">
+                        <label for="popup-toggle-34" class="group4">
+                            <img src="https://i.pinimg.com/originals/a7/ef/61/a7ef611e47ca2ab1e49c9bc03185c5c8.png" 
+                                 style="height:400px;width:275px;">
+                        </label>
+                    </div>
+                    <div class="popup-overlay"></div>
+                    <div class="popup-content">
+                        <label for="popup-toggle-34" class="popup-close">×</label>
+                        <h3 class="popup-title">Clothing Compatibility and Player Choice</h3>
+                        <p class="popup-text">
+                            Despite the push for new 3D clothing, many players still rely on classic items due to technical limitations.<br><br>
+                            Trend Conflict: While 3D Layered Clothing is the current aesthetic trend, a large number of players continue to wear 
+                            basic 2D printed T-shirts/Shirts (Classic Clothing).<br><br>
+                            Technical Reason: 3D Layered Clothing often fails to appear or displays incorrectly in older or poorly optimized 
+                            games that have not been updated to fully support the newer avatar technology (R15 body type and 3D rigging).<br><br>
+                            Result: Players often choose the simpler 2D T-shirts because they are guaranteed to appear on the avatar across all 
+                            games on the platform, ensuring a consistent look and avoiding cosmetic glitches.
+                        </p>
+                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+    <div class="container">
+        <section id="about-us">
+            <div class="about-us-section">
+                <h2 class="about-us-title">About Us</h2>
+                <div class="about-us-content">
+                    <p>We, the creators of BloxDaily, a Roblox magazine platform, aim to deliver news useful for Roblox players, content creators, developers, and anyone who wants quick and organized updates about the platform.</p>
+                    
+                    <div class="team-photo-section">
+                        <img src="https://i.pinimg.com/736x/43/7c/6e/437c6ec8ab9db5adf1d9c441c7dda46a.jpg" alt="BloxDaily Team" class="team-photo">
+                    </div>
+                    
+                    <p>Three schoolmates developed the concept to collaborate as a small magazine team handling information, encoding in HTML code through Visual Studio Code, writing, and editing the layout of the BloxDaily website.</p>
+                    
+                    <p>The Creator of Roblox
+Founers: Roblox was created by co-founders David Baszucki and Erik Cassel in 2004, with the platform releasing in 2006 
+                    <div class="contact-info">
+                        <p>For updates or messages, you may contact us via email. We'll be posting more social media links shortly so you can follow and interact with us on many platforms.</p>
+                        <div class="contact-email">bloxdaily@gmail.com</div>
+                        <div class="social-links">More social media links coming soon!</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <a href="#" class="back-button">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+
+
+
+</body>
+
+</html>
